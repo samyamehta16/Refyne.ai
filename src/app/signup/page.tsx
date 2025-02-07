@@ -1,12 +1,12 @@
 "use client";
 import React from 'react'
+import Link from 'next/link';
 import { useState } from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
 import logo from "@/assets/images/logo.svg";
 import { Eye, EyeOff } from "lucide-react";
 
-const login = () => {
+const sign = () => {
     const [showpassword, setshowpassword] = useState(false);
     return (
         <div className="flex flex-col items-center min-h-screen bg-[#F4F6FF] font-outfit text-black">
@@ -18,8 +18,8 @@ const login = () => {
                     alt='logo'
                 ></Image>
             </div>
-            <div className='shadow-xl rounded-xl text-center bg-white w-[50%] xl:w-[30%] m-8 h-[78vh] p-4'>
-                <div className="flex justify-center items-center mt-10">
+            <div className='shadow-xl rounded-lg text-center bg-white w-[50%] xl:w-[30%] m-8 h-[78vh] p-4 '>
+                <div className="flex justify-center items-center mt-5">
                     <Image
                         src={logo}
                         height={300}
@@ -28,7 +28,7 @@ const login = () => {
                     />
                 </div>
                 <p className="text-center text-2xl text-black mt-8">Your AI Data Cleaner</p>
-                <p className="text-center text-xl text-gray-500 mt-2 ">Login to your account</p>
+                <p className="text-center text-xl text-gray-500 mt-2">Login to your account</p>
                 <form className="mt-10">
                     <div className="mb-6">
                         <input
@@ -57,16 +57,16 @@ const login = () => {
                         </span>
                     </div>
                     <p className="text-center text-gray-500 text-xl mt-10">
-                        Don't have an account? <Link href="/signup"><span className="text-[#5bb5ea] cursor-pointer">SignUp</span></Link>
+                        Already have an account? <Link href="/login"><span className="text-[#5bb5ea] cursor-pointer">Login</span></Link>
                     </p>
                     <button
                         type="submit"
                         className="w-[40%] bg-[#5BB5EA] mt-12 text-white p-3 rounded-lg hover:bg-[#56aadb]">
-                        Login
+                        Sign up
                     </button>
                 </form>
             </div>
         </div >
     )
 };
-export default login
+export default sign
