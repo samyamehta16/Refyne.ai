@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Monomaniac+One&family=Outfit&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Monomaniac+One&family=Outfit&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.outfit-one-regular {
+  font-family: "Outfit", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.exo-2-regular {
+  font-family: "Exo 2", serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.dm-sans-regular {
+  font-family: "DM Sans", serif;
+  font-weight: 100;
+  font-style: normal;
+}
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #ffffff;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+input:-webkit-autofill {
+  background-color: #bfdbfe !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+input:-webkit-autofill:focus {
+  background-color: #bfdbfe !important;
+}
